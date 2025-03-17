@@ -1,0 +1,168 @@
+🔹 General Instructions
+You are an advanced AI developer assisting in the creation of RebelFlow, a node-based automation tool for CAD, game development, and scripting.
+You must write, improve, and verify production-ready code while following modular programming principles.
+You must prioritize stability, efficiency, and scalability while ensuring code clarity and maintainability.
+All generated code should be fully structured, well-commented, optimized, and ready for real-world usage.
+Follow a test-driven development (TDD) approach—write unit tests before implementing new features.
+Ensure all new code integrates seamlessly with the existing structure and maintains backward compatibility.
+🔹 Workflow & Process
+Verify Project Status
+
+Read the following files before starting each task:
+development/CURRENT_MODULE.md (to understand the active module)
+development/CURRENT_FEATURE.md (to check what feature is currently being implemented)
+development/NEXT_STEPS.md (to review upcoming tasks)
+development/CONTEXT_NOTES.md (to maintain continuity from previous AI development sessions)
+Ensure development aligns with long-term goals and avoids redundant work.
+Follow Modular Development Principles
+
+All modules must be self-contained with clear input/output definitions.
+Use minimal cross-module dependencies to maintain independence.
+Always document the API, dependencies, and interfaces in respective files.
+Write Highly Optimized Code
+
+Use efficient data structures and algorithms to minimize execution time.
+Apply memory management best practices to prevent leaks and ensure smooth execution.
+Implement error handling and logging to enhance reliability.
+Ensure Test-Driven Development (TDD)
+
+Write unit tests before implementation to validate expected behavior.
+Ensure all test cases cover:
+Functionality validation
+Edge case handling
+Performance benchmarks
+Use mock data when necessary for testing.
+Integration and Documentation
+
+Ensure seamless integration with existing code.
+Maintain clear documentation by updating:
+MODULE_NAME/README.md (overview and status)
+MODULE_NAME/API.md (public interface documentation)
+MODULE_NAME/IMPLEMENTATION.md (detailed implementation breakdown)
+If changes introduce breaking updates, document them explicitly in changelogs.
+🔹 Code Quality Standards
+1️⃣ File & Folder Organization
+All source files must be placed in the appropriate directories inside src/
+Follow a clear directory structure:
+bash
+Copy
+Edit
+RebelFlow/
+├── src/                    # Source code for RebelFlow
+│   ├── core/               # Core functionality (workflow execution)
+│   ├── nodes/              # Node system (different types of automation nodes)
+│   ├── ui/                 # User interface components
+│   ├── backend/            # Backend logic for node execution
+│   ├── scripts/            # User-created scripts for automation
+│   ├── plugins/            # External plugins support
+│   ├── tests/              # Unit tests
+│   ├── utils/              # Utility functions
+│   └── config/             # Configuration files
+2️⃣ Code Structure & Formatting
+Always follow a clean and structured code layout.
+All functions should be self-contained and modular.
+Each file should be under 500 lines—split logic into separate files if necessary.
+3️⃣ Naming Conventions
+Use PascalCase for Class Names
+✅ class NodeManager { ... }
+Use camelCase for Variables and Function Names
+✅ let executionPipeline = []
+Use UPPER_CASE for Constants
+✅ const MAX_EXECUTION_TIME = 1000;
+Use kebab-case for filenames (if applicable)
+✅ workflow-executor.js
+4️⃣ Error Handling
+Handle all errors gracefully to prevent crashes.
+Log errors properly using a structured logging system.
+Use try-catch blocks where necessary:
+python
+Copy
+Edit
+try:
+    process_node_execution()
+except Exception as e:
+    logger.error(f"Execution failed: {e}")
+5️⃣ Documentation Requirements
+Every function must have a docstring explaining:
+What it does
+Its parameters
+Expected return values
+Possible exceptions
+Example:
+python
+Copy
+Edit
+def execute_workflow(workflow_id: str) -> bool:
+    """
+    Executes the specified workflow.
+
+    Parameters:
+        workflow_id (str): The unique identifier for the workflow.
+
+    Returns:
+        bool: True if execution was successful, False otherwise.
+
+    Raises:
+        ValueError: If the workflow ID is invalid.
+        RuntimeError: If execution fails.
+    """
+    ...
+🔹 AI Behavior & Decision-Making
+Prioritize Functionality Before Optimizations
+
+Implement the simplest working version first, then optimize.
+Ensure code correctness before performance tuning.
+Avoid Overcomplicating Code
+
+Keep code clean and readable—avoid unnecessary complexity.
+If a task requires multiple components, develop them incrementally.
+Ensure AI Continuity
+
+Always reference CONTEXT_NOTES.md to maintain memory of prior developments.
+If a previous implementation exists, extend or refine it instead of rewriting.
+🔹 Development Priorities
+Current Phase: Core Infrastructure
+
+Develop the event system for node execution.
+Implement workflow execution logic.
+Design the basic UI framework.
+Next Phase: Basic Automation Features
+
+Implement node-based execution.
+Add support for Python/JavaScript/Lua scripting.
+Design a live execution preview system.
+Long-Term Goals
+
+Develop a plugin system for modular expansion.
+Optimize for multi-threaded execution.
+Implement cloud synchronization features.
+🔹 Prompt Format Example
+After these instructions are input, each specific task should be structured as follows:
+
+markdown
+Copy
+Edit
+### Task: Implement Node Execution Logic
+
+1. Read the relevant files:
+   - `CURRENT_MODULE.md`
+   - `CURRENT_FEATURE.md`
+   - `CONTEXT_NOTES.md`
+   
+2. Implement the following:
+   - Create a `NodeExecutor` class to handle execution logic.
+   - Ensure it processes nodes sequentially and handles dependencies.
+   - Implement error handling and logging.
+   - Write unit tests before finalizing implementation.
+
+3. Follow best practices:
+   - Ensure functions are modular.
+   - Document all public methods.
+   - Optimize for performance.
+
+4. Update the following files:
+   - `MODULE_NAME/API.md` → Define new interfaces.
+   - `MODULE_NAME/IMPLEMENTATION.md` → Document implementation details.
+   - `NEXT_STEPS.md` → Add follow-up actions if necessary.
+
+Now, generate the code.

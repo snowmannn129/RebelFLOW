@@ -1,5 +1,23 @@
 # RebelFLOW Development Procedure
 
+## Backup Standard
+
+RebelFLOW follows the RebelSUITE backup standard. Backups are created after major milestones:
+- Phase completions
+- Release types (Alpha, Beta, Full)
+- Major development advancements
+- Scheduled dates
+
+Backups are stored as ZIP files in `C:\Users\snowm\Desktop\VSCode\Backup` with the naming format:
+`RebelFLOW_(mmddyyyy)_(current time).zip`
+
+To create a backup, run:
+```powershell
+.\backup_project.ps1 -ProgramName "RebelFLOW" -MilestoneType "<milestone type>"
+```
+
+Backup history is documented below in chronological order.
+
 ## 1. Development Environment & Execution
 - RebelFLOW is developed in VSCode on Windows 11 using PowerShell
 - Built using TypeScript/JavaScript with Node.js and React
@@ -366,3 +384,15 @@ git commit -m "Implemented node connection validation system"
 - All features must be verified using unit, UI, and integration tests
 - Do NOT generate untested or disconnected UI components
 - DO ensure all modules connect properly before moving to the next task
+
+## Backup: Development - 03/19/2025 03:14:56
+
+* Backup created: RebelFLOW_03192025_031456.zip
+* Location: C:\Users\snowm\Desktop\VSCode\Backup\RebelFLOW_03192025_031456.zip
+
+
+## Backup: Development - 03/21/2025 18:13:14
+
+* Backup created: RebelFLOW_03212025_181314.zip
+* Location: C:\Users\snowm\Desktop\VSCode\Backup\RebelFLOW_03212025_181314.zip
+
